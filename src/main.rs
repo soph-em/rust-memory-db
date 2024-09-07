@@ -11,7 +11,7 @@ fn main() -> Result<()> {
     let stdin = io::stdin();
     for maybe_line in stdin.lock().lines() {
         let line = maybe_line?;
-        let mut splits = line.split(' ');
+        let splits = line.split(' ');
         let parser = Parser {
             splits: splits.map(|s| s.to_string()).collect(),
         };
